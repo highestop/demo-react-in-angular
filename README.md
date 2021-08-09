@@ -19,4 +19,22 @@ If there is another code source only to fetch and update, `git remote add source
   remotes/origin/master     // my repo forked on gitlab
 ```
 
+```
+[remote "origin"]
+        url = git@gitlab.**.com:chenyn01/react-in-angular.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[remote "gitlab"]
+        url = git@gitlab.**.com:zhaojx01/react-in-angular.git
+        fetch = +refs/heads/*:refs/remotes/gitlab/*
+[remote "github"]
+        url = git@github.com:highestop/demo-react-in-angular.git
+        fetch = +refs/heads/*:refs/remotes/github/*
+[branch "main"]
+        remote = github
+        merge = refs/heads/main
+```
+
 Noted that, this README file is only available on Github, so DO NOT rebase `github:main` on other branches and push them to their sources. That may cause some problems for other people.
