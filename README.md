@@ -10,4 +10,13 @@ Next `git checkout github:main && git switch -c main && git branch --set-upstrea
 
 If there is another code source only to fetch and update, `git remote add source **` and then `git fetch source && git rebase source/master` to update codes from source to local, then push to `origin:master`. Or checkout `main` and rebase in the same way and do `git p` push to `github:main`.
 
+```
+  main                      // upstream to github/main
+* master                    // upstream to origin/master
+  remotes/github/main       // my mirror repo on github
+  remotes/gitlab/master     // source repo on gitlab
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master     // my repo forked on gitlab
+```
+
 Noted that, this README file is only available on Github, so DO NOT rebase `github:main` on other branches and push them to their sources. That may cause some problems for other people.
