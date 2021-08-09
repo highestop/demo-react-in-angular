@@ -1,3 +1,3 @@
-# react-in-angular
+# React In Angular
 
-Run react in angular app
+Progressive Migration From Angular(v11) to React(v17)
