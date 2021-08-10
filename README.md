@@ -6,9 +6,9 @@ React(v.17) in Angular(v.12), demo for progressive migration.
 
 The origin remote codebase is in GitLab, so `git remote add github git@github.com:highestop/react-in-angular.git` first to add the github remote.
 
-Next `git checkout github:main && git switch -c main && git branch --set-upstream github main` to create a local branch `main` and set its upstream to `github:main`.
+Next `git checkout github:main && git switch -c main && git branch --set-upstream github main` to create a local branch `main` and set its upstream to `github:main`, or on pushing the code run `git push --set-upstream github main`.
 
-If there is another code source only to fetch and update, `git remote add source **` and then `git fetch source && git rebase source/master` to update codes from source to local, then push to `origin:master`. Or checkout `main` and rebase in the same way and do `git p` push to `github:main`.
+If there are other code sources, `git remote add source **` and then `git fetch source && git rebase source/master` to update code from that source, then `git push`. Or checkout `main` and rebase in the same way and do `git push github main`.
 
 ```
   main                      // upstream to github/main
